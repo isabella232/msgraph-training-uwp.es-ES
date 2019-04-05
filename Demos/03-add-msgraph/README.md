@@ -12,30 +12,29 @@ Si no tiene una cuenta de Microsoft, hay un par de opciones para obtener una cue
 - Puede [registrarse para obtener una nueva cuenta Microsoft personal](https://signup.live.com/signup?wa=wsignin1.0&rpsnv=12&ct=1454618383&rver=6.4.6456.0&wp=MBI_SSL_SHARED&wreply=https://mail.live.com/default.aspx&id=64855&cbcxt=mai&bk=1454618383&uiflavor=web&uaid=b213a65b4fdc484382b6622b3ecaa547&mkt=E-US&lc=1033&lic=1).
 - Puede [registrarse para el programa de desarrolladores de office 365](https://developer.microsoft.com/office/dev-program) para obtener una suscripción gratuita a Office 365.
 
-## <a name="register-a-native-application-with-the-application-registration-portal"></a>Registro de una aplicación nativa con el portal de registro de aplicaciones
+## <a name="register-a-native-application-with-the-azure-active-directory-admin-center"></a>Registrar una aplicación nativa con el centro de administración de Azure Active Directory
 
-1. Abra un explorador y vaya al [portal de registro de aplicaciones](https://apps.dev.microsoft.com) e inicie sesión con una **cuenta personal** (también conocido como Microsoft Account) o una **cuenta profesional o educativa**.
+1. Abra un explorador y vaya al [centro de administración de Azure Active Directory](https://aad.portal.azure.com) e inicie sesión con una **cuenta personal** (aka: cuenta de Microsoft) o una **cuenta profesional o educativa**.
 
-1. Seleccione **Agregar una aplicación** en la parte superior de la página.
+1. Seleccione **Azure Active Directory** en el panel de navegación de la izquierda y, después, seleccione **registros de aplicaciones (vista previa)** en **administrar**.
 
-    > **Nota:** Si ve más de un botón **Agregar una aplicación** en la página, seleccione el que corresponda a la lista de **aplicaciones convergentes** .
+    ![Una captura de pantalla de los registros de la aplicación ](/tutorial/images/aad-portal-app-registrations.png)
 
-1. En la página **registrar la aplicación** , establezca el tutorial **nombre** de la aplicación para **UWP gráfico** y seleccione **crear**.
+1. Seleccione **registro nuevo**. En la página **registrar una aplicación** , establezca los valores de la siguiente manera.
 
-    ![Captura de pantalla de la creación de una nueva aplicación en el sitio web del portal de registro de aplicaciones](../../../Images/arp-create-app-01.png)
+    - Establezca **el nombre** en `UWP Graph Tutorial`.
+    - Establezca **tipos de cuenta compatibles** en **cuentas de cualquier directorio de la organización y cuentas personales de Microsoft**.
+    - Deje el **URI** de redireccionamiento vacío.
 
-1. En la página de **registro del tutorial de gráficos de UWP** , en la sección **propiedades** , copie el identificador de la **aplicación** ya que lo necesitará más adelante.
+    ![Captura de pantalla de la página registrar una aplicación](/tutorial/images/aad-register-an-app.png)
 
-    ![Captura de pantalla del identificador de la aplicación recién creada](../../../Images/arp-create-app-02.png)
+1. Elija **registrar**. En la página **tutorial de gráficos de UWP** , copie el valor del identificador de la **aplicación (cliente)** y lo guarde, lo necesitará en el paso siguiente.
 
-1. Desplácese hacia abajo hasta la sección **plataformas** .
+    ![Captura de pantalla del identificador de la aplicación del nuevo registro de la aplicación](/tutorial/images/aad-application-id.png)
 
-    1. Seleccione **Agregar plataforma**.
-    1. En el cuadro de diálogo **Agregar plataforma** , seleccione **aplicación nativa**.
+1. Seleccione el vínculo **Agregar un URI de** redireccionamiento. En la página **URI** de redireccionamiento, busque la sección **URI de redireccionamiento sugeridos para clientes públicos (móvil, escritorio)** . Seleccione el `urn:ietf:wg:oauth:2.0:oob` URI y, a continuación, elija **Guardar**.
 
-        ![Captura de pantalla que crea una plataforma para la aplicación](../../../Images/arp-create-app-03.png)
-
-1. Desplácese hasta la parte inferior de la página y seleccione **Guardar**.
+    ![Captura de pantalla de la página URI de redireccionamiento](/tutorial/images/aad-redirect-uris.png)
 
 ## <a name="configure-the-sample"></a>Configuración del ejemplo
 
