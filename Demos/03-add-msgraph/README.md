@@ -14,21 +14,21 @@ Si no tiene una cuenta de Microsoft, hay un par de opciones para obtener una cue
 
 ## <a name="register-a-native-application-with-the-azure-active-directory-admin-center"></a>Registrar una aplicación nativa con el centro de administración de Azure Active Directory
 
-1. Abra un explorador y vaya al [centro de administración de Azure Active Directory](https://aad.portal.azure.com) e inicie sesión con una **cuenta personal** (aka: cuenta de Microsoft) o una **cuenta profesional o educativa**.
+1. Abra un explorador y vaya al [centro de administración de Azure Active Directory](https://aad.portal.azure.com) e inicie sesión con una **cuenta personal** (también conocida como: cuenta Microsoft) o una **cuenta profesional o educativa**.
 
-1. Seleccione **Azure Active Directory** en el panel de navegación de la izquierda y, después, seleccione **registros de aplicaciones (vista previa)** en **administrar**.
+1. Seleccione **Azure Active Directory** en el panel de navegación de la izquierda y, después, seleccione **registros de aplicaciones** en **administrar**.
 
     ![Una captura de pantalla de los registros de la aplicación ](/tutorial/images/aad-portal-app-registrations.png)
 
-1. Seleccione **registro nuevo**. En la página **registrar una aplicación** , establezca los valores de la siguiente manera.
+1. Seleccione **Nuevo registro**. En la página **Registrar una aplicación**, establezca los valores siguientes.
 
-    - Establezca **el nombre** en `UWP Graph Tutorial`.
-    - Establezca **tipos de cuenta compatibles** en **cuentas de cualquier directorio de la organización y cuentas personales de Microsoft**.
-    - Deje el **URI** de redireccionamiento vacío.
+    - Establezca **Nombre** como `UWP Graph Tutorial`.
+    - Establezca **Tipos de cuenta admitidos** en **Cuentas en cualquier directorio de organización y cuentas personales de Microsoft**.
+    - Deje **URI de redireccionamiento** vacía.
 
     ![Captura de pantalla de la página registrar una aplicación](/tutorial/images/aad-register-an-app.png)
 
-1. Elija **registrar**. En la página **tutorial de gráficos de UWP** , copie el valor del identificador de la **aplicación (cliente)** y lo guarde, lo necesitará en el paso siguiente.
+1. Elija **Registrar**. En la página **tutorial de gráficos de UWP** , copie el valor del identificador de la **aplicación (cliente)** y lo guarde, lo necesitará en el paso siguiente.
 
     ![Captura de pantalla del identificador de la aplicación del nuevo registro de la aplicación](/tutorial/images/aad-application-id.png)
 

@@ -88,7 +88,7 @@ if ((App.Current as App).IsAuthenticated)
 }
 ```
 
-ReInicie la aplicación y haga clic en el control de **Inicio de sesión** en la parte superior de la aplicación. Una vez que haya iniciado sesión, la interfaz de usuario debe cambiar para indicar que ha iniciado sesión correctamente.
+Reinicie la aplicación y haga clic en el control de **Inicio de sesión** en la parte superior de la aplicación. Una vez que haya iniciado sesión, la interfaz de usuario debe cambiar para indicar que ha iniciado sesión correctamente.
 
 ![Una captura de pantalla de la aplicación después de iniciar sesión](./images/add-aad-auth-01.png)
 

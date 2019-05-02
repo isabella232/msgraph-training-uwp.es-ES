@@ -30,9 +30,9 @@ Este módulo se ha registrado y está disponible en el canal de YouTube de desar
 
 | Roles                | Autores (es)                                                        |
 | -------------------- | ---------------------------------------------------------------- |
-| Manuales de laboratorio/diapositivas | Andrew Connell (MVP de Microsoft, Voitanos)@andrewconnell          |
-| FRECUENTES                   | Julia Turner (MVP de Microsoft, Sympraxis Consulting)@juliemturner |
-| Patrocinador/soporte técnico    | Áreas de Yina (Microsoft)@yina_arenas                             |
+| Manuales de laboratorio/diapositivas | Andrew Connell (MVP de Microsoft, Voitanos) @andrewconnell          |
+| FRECUENTES                   | Julia Turner (MVP de Microsoft, Sympraxis Consulting) @juliemturner |
+| Patrocinador/soporte técnico    | @Yina_arenas áreas de Yina (Microsoft)                             |
 
 ## <a name="version-history"></a>Historial de versiones
 
@@ -40,8 +40,8 @@ Este módulo se ha registrado y está disponible en el canal de YouTube de desar
 | ------- | ------------------ | ---------------------------------------------------- |
 | 1.7     | 6 de marzo de 2019      | actualización del contenido de 2019Q3                               |
 | 1.6     | 19 de diciembre de 2018  | actualización del contenido de 2019Q2                               |
-| 1,5     | 27 de noviembre de 2018  | Incorporado a docs.microsoft.com/graph                |
-| 1.4     | 2 de noviembre de 2018   | Módulos reVisados para la coherencia con otras capacitaciones. |
+| 1.5     | 27 de noviembre de 2018  | Incorporado a docs.microsoft.com/graph                |
+| 1.4     | 2 de noviembre de 2018   | Módulos revisados para la coherencia con otras capacitaciones. |
 | 1.3     | 20 de septiembre de 2018 | actualización del contenido de 2019Q1                               |
 | 1.2     | 28 de junio de 2018      | Se ha agregado una screencast.                                    |
 | 1.1     | 22 de junio de 2018      | Se rescribió para usar las instrucciones más recientes.                    |
