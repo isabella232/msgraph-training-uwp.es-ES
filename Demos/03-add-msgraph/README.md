@@ -24,17 +24,13 @@ Si no tiene una cuenta de Microsoft, hay un par de opciones para obtener una cue
 
     - Establezca **Nombre** como `UWP Graph Tutorial`.
     - Establezca **Tipos de cuenta admitidos** en **Cuentas en cualquier directorio de organización y cuentas personales de Microsoft**.
-    - Deje **URI de redireccionamiento** vacía.
+    - En **URI**de redireccionamiento, cambie la lista desplegable a **cliente público (móvil & escritorio)** y establezca `urn:ietf:wg:oauth:2.0:oob`el valor en.
 
-    ![Captura de pantalla de la página registrar una aplicación](/tutorial/images/aad-register-an-app.png)
+    ![Captura de pantalla de la página registrar una aplicación](/tutorial/images/aad-register-app.png)
 
 1. Elija **Registrar**. En la página **tutorial de gráficos de UWP** , copie el valor del identificador de la **aplicación (cliente)** y lo guarde, lo necesitará en el paso siguiente.
 
     ![Captura de pantalla del identificador de la aplicación del nuevo registro de la aplicación](/tutorial/images/aad-application-id.png)
-
-1. Seleccione el vínculo **Agregar un URI de** redireccionamiento. En la página **URI** de redireccionamiento, busque la sección **URI de redireccionamiento sugeridos para clientes públicos (móvil, escritorio)** . Seleccione el `urn:ietf:wg:oauth:2.0:oob` URI y, a continuación, elija **Guardar**.
-
-    ![Captura de pantalla de la página URI de redireccionamiento](/tutorial/images/aad-redirect-uris.png)
 
 ## <a name="configure-the-sample"></a>Configuración del ejemplo
 
@@ -45,4 +41,4 @@ Si no tiene una cuenta de Microsoft, hay un par de opciones para obtener una cue
 
 ## <a name="run-the-sample"></a>Ejecutar el ejemplo
 
-En Visual Studio, presione **F5** o elija **depurar _GT_ iniciar**depuración.
+En Visual Studio, presione **F5** o elija **depurar > iniciar**depuración.

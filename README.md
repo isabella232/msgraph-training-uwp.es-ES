@@ -24,20 +24,22 @@ Si solo quiere el ejemplo completado que se genera siguiendo este laboratorio, p
 
 ## <a name="watch-the-module"></a>Ver el módulo
 
-Este módulo se ha registrado y está disponible en el canal de YouTube de desarrollo de Office: [crear aplicaciones para UWP con el SDK de Microsoft Graph .net](https://youtu.be/XNxBUmqcf6c)
+Este módulo se ha registrado y está disponible en el canal de YouTube de desarrollo de Office: [crear aplicaciones para UWP con el SDK de Microsoft Graph .net](https://youtu.be/oBYCBxkWMRA)
 
 ## <a name="contributors"></a>Colaboradores
 
-| Roles                | Autores (es)                                                        |
-| -------------------- | ---------------------------------------------------------------- |
-| Manuales de laboratorio/diapositivas | Andrew Connell (MVP de Microsoft, Voitanos) @andrewconnell          |
-| FRECUENTES                   | Julia Turner (MVP de Microsoft, Sympraxis Consulting) @juliemturner |
-| Patrocinador/soporte técnico    | @Yina_arenas áreas de Yina (Microsoft)                             |
+|        Roles         |                                           Autores (es)                                           |
+| -------------------- | --------------------------------------------------------------------------------------------- |
+| Manuales de laboratorio/diapositivas | Andrew Connell (MVP de Microsoft, Voitanos) [@andrewconnell](//github.com/andrewconnell)         |
+| FRECUENTES                   | Julia Turner (MVP de Microsoft, Sympraxis Consulting) [@juliemturner](//github.com/juliemturner) |
+| Patrocinador/soporte técnico    | [@Yina_arenas](//github.com//github.com/yina_arenas) áreas de Yina (Microsoft)                  |
 
 ## <a name="version-history"></a>Historial de versiones
 
-| Versión | Fecha               | Comentarios                                             |
+| Versión |        Fecha        |                       Comentarios                       |
 | ------- | ------------------ | ---------------------------------------------------- |
+| 1.9     | 18 de junio de 2019      | Se actualizó el archivo Léame en grabación de screencast actualizada     |
+| 1.8     | 24 de mayo de 2019       | actualización del contenido de 2019Q4                               |
 | 1.7     | 6 de marzo de 2019      | actualización del contenido de 2019Q3                               |
 | 1.6     | 19 de diciembre de 2018  | actualización del contenido de 2019Q2                               |
 | 1.5     | 27 de noviembre de 2018  | Incorporado a docs.microsoft.com/graph                |
