@@ -169,7 +169,7 @@ namespace graph_tutorial
 }
 ```
 
-Este código toma la estructura [dateTimeTimeZone](https://developer.microsoft.com/en-us/graph/docs/api-reference/v1.0/resources/datetimetimezone) devuelta por Microsoft Graph y la analiza en un `DateTimeOffset` objeto. A continuación, convierte el valor en la zona horaria del usuario y devuelve el valor con formato.
+Este código toma la estructura [dateTimeTimeZone](https://docs.microsoft.com/graph/api/resources/datetimetimezone?view=graph-rest-1.0) devuelta por Microsoft Graph y la analiza en un `DateTimeOffset` objeto. A continuación, convierte el valor en la zona horaria del usuario y devuelve el valor con formato.
 
 Abra `CalendarPage.xaml` y agregue lo siguiente **antes** del `<Grid>` elemento.
 

@@ -6,15 +6,15 @@ Este módulo le presentará cómo trabajar con el SDK de Microsoft Graph para ob
 
 En este laboratorio, creará una aplicación para UWP con el punto de conexión de autenticación de Azure AD V2 y la biblioteca de autenticación de Microsoft (MSAL) para obtener acceso a los datos de Office 365 con Microsoft Graph.
 
-- [Tutorial de Microsoft Graph para UWP](https://docs.microsoft.com/graph/training/uwp-tutorial)
+- [Tutorial de Microsoft Graph para UWP](https://docs.microsoft.com/graph/tutorials/uwp)
 
 ## <a name="demos"></a>Demostraciones
 
 El [](./Demos) directorio demos de este repositorio contiene copias del proyecto que corresponden a la realización de secciones individuales del tutorial. Si solo quiere demostrar una sección concreta del tutorial, puede comenzar con la versión de la sección anterior.
 
-- [01-Create-App](Demos/01-create-app): [creación de una aplicación Web de la plataforma universal de Windows (UWP)](https://docs.microsoft.com/graph/training/uwp-tutorial?tutorial-step=1)
-- [02-Add-AAD-auth](Demos/02-add-aad-auth): [adición de autenticación de Azure ad](https://docs.microsoft.com/graph/training/uwp-tutorial?tutorial-step=3) completada
-- [03-Add-MSGraph](Demos/03-add-msgraph): [obtener datos de calendario](https://docs.microsoft.com/graph/training/uwp-tutorial?tutorial-step=4) completados
+- [01-Create-App](Demos/01-create-app): [creación de una aplicación Web de la plataforma universal de Windows (UWP)](https://docs.microsoft.com/graph/tutorials/uwp?tutorial-step=1)
+- [02-Add-AAD-auth](Demos/02-add-aad-auth): [adición de autenticación de Azure ad](https://docs.microsoft.com/graph/tutorials/uwp?tutorial-step=3) completada
+- [03-Add-MSGraph](Demos/03-add-msgraph): [obtener datos de calendario](https://docs.microsoft.com/graph/tutorials/uwp?tutorial-step=4) completados
 
 ## <a name="completed-sample"></a>Ejemplo completado
 
