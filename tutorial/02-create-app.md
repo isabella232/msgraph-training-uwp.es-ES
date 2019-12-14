@@ -11,7 +11,7 @@ En el cuadro de diálogo **configurar el nuevo proyecto** , escriba `graph-tutor
 > [!IMPORTANT]
 > Asegúrese de que escribe exactamente el mismo nombre para el proyecto de Visual Studio que se especifica en estas instrucciones de la práctica. El nombre del proyecto de Visual Studio se convierte en parte del espacio de nombres en el código. El código incluido en estas instrucciones depende del espacio de nombres que coincida con el nombre de proyecto de Visual Studio especificado en estas instrucciones. Si usa un nombre de proyecto diferente, el código no se compilará a menos que ajuste todos los espacios de nombres para que se correspondan con el nombre del proyecto de Visual Studio que ha especificado al crear el proyecto.
 
-Haga clic en **Aceptar**. En el cuadro de diálogo **nuevo proyecto de la plataforma universal de Windows** , asegúrese de que la **versión mínima** esté establecida en `Windows 10 Fall Creators Update (10.0; Build 16299)` o posterior y seleccione **Aceptar**.
+Seleccione **Aceptar**. En el cuadro de diálogo **nuevo proyecto de la plataforma universal de Windows** , asegúrese de que la **versión mínima** esté establecida en `Windows 10 Fall Creators Update (10.0; Build 16299)` o posterior y seleccione **Aceptar**.
 
 Antes de continuar, instale algunos paquetes NuGet adicionales que usará más adelante.
 
@@ -23,10 +23,10 @@ Antes de continuar, instale algunos paquetes NuGet adicionales que usará más a
 Seleccione **herramientas > el administrador de paquetes de NuGet > consola del administrador de paquetes**. En la consola del administrador de paquetes, escriba los siguientes comandos.
 
 ```Powershell
-Install-Package Microsoft.Toolkit.Uwp.Ui.Controls -Version 5.1.1
-Install-Package Microsoft.Toolkit.Uwp.Ui.Controls.DataGrid -Version 5.1.0
-Install-Package Microsoft.Toolkit.Uwp.Ui.Controls.Graph -Version 5.1.0
-Install-Package Microsoft.Graph -Version 1.16.0
+Install-Package Microsoft.Toolkit.Uwp.Ui.Controls -Version 6.0.0
+Install-Package Microsoft.Toolkit.Uwp.Ui.Controls.DataGrid -Version 6.0.0
+Install-Package Microsoft.Toolkit.Uwp.Ui.Controls.Graph -Version 6.0.0
+Install-Package Microsoft.Graph -Version 1.20.0
 ```
 
 ## <a name="design-the-app"></a>Diseñar la aplicación
@@ -142,7 +142,7 @@ private void NavView_ItemInvoked(NavigationView sender, NavigationViewItemInvoke
 }
 ```
 
-Guarde todos los cambios y, a continuación, presione **F5** o seleccione depurar **> iniciar** depuración en Visual Studio.
+Guarde todos los cambios y, a continuación, presione **F5** o seleccione **depurar > iniciar depuración** en Visual Studio.
 
 > [!NOTE]
 > Asegúrese de seleccionar la configuración adecuada para su equipo (ARM, x64, x86).
