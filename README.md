@@ -8,19 +8,11 @@ En este laboratorio, creará una aplicación para UWP con el punto de conexión 
 
 - [Tutorial de Microsoft Graph para UWP](https://docs.microsoft.com/graph/tutorials/uwp)
 
-## <a name="demos"></a>Demostraciones
-
-El [](./Demos) directorio demos de este repositorio contiene copias del proyecto que corresponden a la realización de secciones individuales del tutorial. Si solo quiere demostrar una sección concreta del tutorial, puede comenzar con la versión de la sección anterior.
-
-- [01-Create-App](Demos/01-create-app): [creación de una aplicación Web de la plataforma universal de Windows (UWP)](https://docs.microsoft.com/graph/tutorials/uwp?tutorial-step=1)
-- [02-Add-AAD-auth](Demos/02-add-aad-auth): [adición de autenticación de Azure ad](https://docs.microsoft.com/graph/tutorials/uwp?tutorial-step=3) completada
-- [03-Add-MSGraph](Demos/03-add-msgraph): [obtener datos de calendario](https://docs.microsoft.com/graph/tutorials/uwp?tutorial-step=4) completados
-
 ## <a name="completed-sample"></a>Ejemplo completado
 
 Si solo quiere el ejemplo completado que se genera siguiendo este laboratorio, puede encontrarlo aquí.
 
-- [Proyecto completado](Demos/03-add-msgraph)
+- [Proyecto completado](demo)
 
 ## <a name="watch-the-module"></a>Ver el módulo
 
@@ -38,11 +30,12 @@ Este módulo se ha registrado y está disponible en el canal de YouTube de desar
 
 | Versión |        Fecha        |                       Comentarios                       |
 | ------- | ------------------ | ---------------------------------------------------- |
+| 1,10    | 18 de marzo de 2020     | Tutorial actualizado                                   |
 | 1.9     | 18 de junio de 2019      | Se actualizó el archivo Léame en grabación de screencast actualizada     |
 | 1.8     | 24 de mayo de 2019       | actualización del contenido de 2019Q4                               |
 | 1.7     | 6 de marzo de 2019      | actualización del contenido de 2019Q3                               |
 | 1.6     | 19 de diciembre de 2018  | actualización del contenido de 2019Q2                               |
-| 1.5     | 27 de noviembre de 2018  | Incorporado a docs.microsoft.com/graph                |
+| 1,5     | 27 de noviembre de 2018  | Incorporado a docs.microsoft.com/graph                |
 | 1.4     | 2 de noviembre de 2018   | Módulos revisados para la coherencia con otras capacitaciones. |
 | 1.3     | 20 de septiembre de 2018 | actualización del contenido de 2019Q1                               |
 | 1.2     | 28 de junio de 2018      | Se ha agregado una screencast.                                    |

@@ -12,7 +12,7 @@ En este ejercicio, creará una nueva aplicación nativa de Azure AD con el centr
 
     - Establezca **Nombre** como `UWP Graph Tutorial`.
     - Establezca **Tipos de cuenta admitidos** en **Cuentas en cualquier directorio de organización y cuentas personales de Microsoft**.
-    - En **URI**de redireccionamiento, cambie la lista desplegable a **cliente público (móvil & escritorio)** y establezca `urn:ietf:wg:oauth:2.0:oob`el valor en.
+    - En **URI de redireccionamiento**, cambie la lista desplegable a **cliente público (móvil & escritorio)** y establezca `https://login.microsoftonline.com/common/oauth2/nativeclient`el valor en.
 
     ![Captura de pantalla de la página registrar una aplicación](./images/aad-register-app.png)
 
