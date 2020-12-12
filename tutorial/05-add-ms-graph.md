@@ -4,9 +4,9 @@ En este ejercicio, incorporará Microsoft Graph a la aplicación. Para esta apli
 
 ## <a name="get-calendar-events-from-outlook"></a>Obtener eventos de calendario de Outlook
 
-1. Agregue una nueva página para la vista de calendario. Haga clic con el botón secundario en el proyecto **GraphTutorial** en el explorador de soluciones y seleccione **Agregar > nuevo elemento..**.. Elija **página en blanco**, `CalendarPage.xaml` escriba en el campo **nombre** y seleccione **Agregar**.
+1. Agregue una nueva página para la vista de calendario. Haga clic con el botón secundario en el proyecto **GraphTutorial** en el explorador de soluciones y seleccione **Agregar > nuevo elemento..**.. Elija **página en blanco**, escriba `CalendarPage.xaml` en el campo **nombre** y seleccione **Agregar**.
 
-1. Abra `CalendarPage.xaml` y agregue la siguiente línea dentro del elemento `<Grid>` existente.
+1. Abra `CalendarPage.xaml` y agregue la siguiente línea dentro del `<Grid>` elemento existente.
 
     ```xaml
     <TextBlock x:Name="Events" TextWrapping="Wrap"/>
@@ -15,6 +15,7 @@ En este ejercicio, incorporará Microsoft Graph a la aplicación. Para esta apli
 1. Abra `CalendarPage.xaml.cs` y agregue las siguientes `using` instrucciones en la parte superior del archivo.
 
     ```csharp
+    using Microsoft.Graph;
     using Microsoft.Toolkit.Graph.Providers;
     using Microsoft.Toolkit.Uwp.UI.Controls;
     using Newtonsoft.Json;
@@ -41,33 +42,87 @@ En este ejercicio, incorporará Microsoft Graph a la aplicación. Para esta apli
 
         try
         {
+            // Get the user's mailbox settings to determine
+            // their time zone
+            var user = await graphClient.Me.Request()
+                .Select(u => new { u.MailboxSettings })
+                .GetAsync();
+
+            var startOfWeek = GetUtcStartOfWeekInTimeZone(DateTime.Today, user.MailboxSettings.TimeZone);
+            var endOfWeek = startOfWeek.AddDays(7);
+
+            var queryOptions = new List<QueryOption>
+            {
+                new QueryOption("startDateTime", startOfWeek.ToString("o")),
+                new QueryOption("endDateTime", endOfWeek.ToString("o"))
+            };
+
             // Get the events
-            var events = await graphClient.Me.Events.Request()
-                .Select("subject,organizer,start,end")
-                .OrderBy("createdDateTime DESC")
+            var events = await graphClient.Me.CalendarView.Request(queryOptions)
+                .Header("Prefer", $"outlook.timezone=\"{user.MailboxSettings.TimeZone}\"")
+                .Select(ev => new
+                {
+                    ev.Subject,
+                    ev.Organizer,
+                    ev.Start,
+                    ev.End
+                })
+                .OrderBy("start/dateTime")
+                .Top(50)
                 .GetAsync();
 
             // TEMPORARY: Show the results as JSON
             Events.Text = JsonConvert.SerializeObject(events.CurrentPage);
         }
-        catch(Microsoft.Graph.ServiceException ex)
+        catch (ServiceException ex)
         {
             ShowNotification($"Exception getting events: {ex.Message}");
         }
 
         base.OnNavigatedTo(e);
     }
+
+    private static DateTime GetUtcStartOfWeekInTimeZone(DateTime today, string timeZoneId)
+    {
+        TimeZoneInfo userTimeZone = TimeZoneInfo.FindSystemTimeZoneById(timeZoneId);
+
+        // Assumes Sunday as first day of week
+        int diff = System.DayOfWeek.Sunday - today.DayOfWeek;
+
+        // create date as unspecified kind
+        var unspecifiedStart = DateTime.SpecifyKind(today.AddDays(diff), DateTimeKind.Unspecified);
+
+        // convert to UTC
+        return TimeZoneInfo.ConvertTimeToUtc(unspecifiedStart, userTimeZone);
+    }
     ```
 
     Tenga en cuenta lo que `OnNavigatedTo` hace el código.
 
-    - La dirección URL a la que se `/v1.0/me/events`llamará es.
-    - La `Select` función limita los campos devueltos para cada evento a solo aquellos que la vista usará realmente.
-    - La `OrderBy` función ordena los resultados por la fecha y hora en que se crearon, con el elemento más reciente en primer lugar.
+    - La dirección URL a la que se llamará es `/me/calendarview` .
+        - Los `startDateTime` `endDateTime` parámetros y definen el inicio y el final de la vista de calendario.
+        - El `Prefer: outlook.timezone` encabezado hace que el `start` y `end` de los eventos se devuelvan en la zona horaria del usuario.
+        - La `Select` función limita los campos devueltos para cada evento a solo aquellos que la aplicación usará realmente.
+        - La `OrderBy` función ordena los resultados por fecha y hora de inicio.
+        - La `Top` función solicita un máximo de 50 eventos.
 
-1. Modifique el `NavView_ItemInvoked` método en el `MainPage.xaml.cs` archivo para reemplazar la instrucción `switch` existente por lo siguiente.
+1. Modifique el `NavView_ItemInvoked` método en el `MainPage.xaml.cs` archivo para reemplazar la `switch` instrucción existente por lo siguiente.
 
-    :::code language="csharp" source="../demo/GraphTutorial/MainPage.xaml.cs" id="SwitchStatementSnippet" highlight="4":::
+    ```csharp
+    switch (invokedItem.ToLower())
+    {
+        case "new event":
+            throw new NotImplementedException();
+            break;
+        case "calendar":
+            RootFrame.Navigate(typeof(CalendarPage));
+            break;
+        case "home":
+        default:
+            RootFrame.Navigate(typeof(HomePage));
+            break;
+    }
+    ```
 
 Ahora puede ejecutar la aplicación, iniciar sesión y hacer clic en el elemento de navegación **calendario** en el menú de la izquierda. Debería ver un volcado JSON de los eventos en el calendario del usuario.
 
@@ -135,7 +190,7 @@ Ahora puede ejecutar la aplicación, iniciar sesión y hacer clic en el elemento
 
     :::code language="xaml" source="../demo/GraphTutorial/CalendarPage.xaml" id="ResourcesSnippet":::
 
-1. Reemplace los dos `DataGridTextColumn` últimos elementos por lo siguiente.
+1. Reemplace los dos últimos `DataGridTextColumn` elementos por lo siguiente.
 
     :::code language="xaml" source="../demo/GraphTutorial/CalendarPage.xaml" id="BindingSnippet" highlight="4,9":::
 

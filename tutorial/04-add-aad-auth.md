@@ -2,10 +2,10 @@
 
 En este ejercicio, ampliará la aplicación del ejercicio anterior para admitir la autenticación con Azure AD. Esto es necesario para obtener el token de acceso de OAuth necesario para llamar a Microsoft Graph. En este paso, integrará el control **LoginButton** de los [controles de Windows Graph](https://github.com/windows-toolkit/Graph-Controls) en la aplicación.
 
-1. Haga clic con el botón secundario en el proyecto **GraphTutorial** en el explorador de soluciones y seleccione **Agregar > nuevo elemento..**.. Elija el **archivo de recursos (. resw)**, asigne `OAuth.resw` un nombre al archivo y seleccione **Agregar**. Cuando el nuevo archivo se abra en Visual Studio, cree dos recursos de la siguiente manera.
+1. Haga clic con el botón secundario en el proyecto **GraphTutorial** en el explorador de soluciones y seleccione **Agregar > nuevo elemento..**.. Elija el **archivo de recursos (. resw)**, asigne un nombre al archivo `OAuth.resw` y seleccione **Agregar**. Cuando el nuevo archivo se abra en Visual Studio, cree dos recursos de la siguiente manera.
 
-    - **Name:** `AppId`, **Value:** el identificador de la aplicación que ha generado en el portal de registro de aplicaciones
-    - **Nombre:** `Scopes`, **valor:**`User.Read Calendars.Read`
+    - **Name:** `AppId` , **Value:** el identificador de la aplicación que ha generado en el portal de registro de aplicaciones
+    - **Nombre:** `Scopes` , **valor:**`User.Read User.ReadBasic.All People.Read MailboxSettings.Read Calendars.ReadWrite`
 
     ![Una captura de pantalla del archivo OAuth. resw en el editor de Visual Studio](./images/edit-resources-01.png)
 
@@ -26,13 +26,13 @@ En este ejercicio, ampliará la aplicación del ejercicio anterior para admitir 
 
     Este código carga la configuración desde `OAuth.resw` e inicializa el proveedor de MSAL con esos valores.
 
-1. Ahora, agregue un controlador de eventos `ProviderUpdated` para el evento `ProviderManager`en el. Agregue la siguiente función a la clase `MainPage`.
+1. Ahora, agregue un controlador de eventos para el `ProviderUpdated` evento en el `ProviderManager` . Agregue la siguiente función a la clase `MainPage`.
 
     :::code language="csharp" source="../demo/GraphTutorial/MainPage.xaml.cs" id="ProviderUpdatedSnippet":::
 
     Este evento se desencadena cuando cambia el proveedor o cuando cambia el estado del proveedor.
 
-1. En el explorador de soluciones, expanda **homepage. Xaml** y Abra `HomePage.xaml.cs`. Reemplace el constructor existente por lo siguiente.
+1. En el explorador de soluciones, expanda **homepage. Xaml** y Abra `HomePage.xaml.cs` . Reemplace el constructor existente por lo siguiente.
 
     :::code language="csharp" source="../demo/GraphTutorial/HomePage.xaml.cs" id="ConstructorSnippet":::
 

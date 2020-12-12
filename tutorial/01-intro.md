@@ -15,17 +15,7 @@ También debe tener una cuenta de Microsoft personal con un buzón de correo en 
 - Puede [registrarse para el programa de desarrolladores de office 365](https://developer.microsoft.com/office/dev-program) para obtener una suscripción gratuita a Office 365.
 
 > [!NOTE]
-> Este tutorial se ha escrito con Visual Studio 2019 versión 16.5.0. Los pasos de esta guía pueden funcionar con otras versiones, pero no se han probado.
-
-## <a name="watch-the-tutorial"></a>Vea el tutorial
-
-Este módulo se ha registrado y está disponible en el canal de YouTube de desarrollo de Office.
-
-<!-- markdownlint-disable MD033 MD034 -->
-<br/>
-
-> [!VIDEO https://www.youtube-nocookie.com/embed/oBYCBxkWMRA]
-<!-- markdownlint-enable MD033 MD034 -->
+> Este tutorial se ha escrito con Visual Studio 2019 versión 16.8.3. Los pasos de esta guía pueden funcionar con otras versiones, pero no se han probado.
 
 ## <a name="feedback"></a>Comentarios
 

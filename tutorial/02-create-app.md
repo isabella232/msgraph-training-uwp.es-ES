@@ -13,21 +13,19 @@ En esta sección, crearemos una nueva aplicación para UWP.
     > [!IMPORTANT]
     > Asegúrese de que escribe exactamente el mismo nombre para el proyecto de Visual Studio que se especifica en estas instrucciones de la práctica. El nombre del proyecto de Visual Studio se convierte en parte del espacio de nombres en el código. El código incluido en estas instrucciones depende del espacio de nombres que coincida con el nombre de proyecto de Visual Studio especificado en estas instrucciones. Si usa un nombre de proyecto diferente, el código no se compilará a menos que ajuste todos los espacios de nombres para que se correspondan con el nombre del proyecto de Visual Studio que ha especificado al crear el proyecto.
 
-1. Elija **Aceptar**. En el cuadro de diálogo **nuevo proyecto de la plataforma universal de Windows** , asegúrese de que la **versión mínima** esté establecida en `Windows 10, Version 1809 (10.0; Build 17763)` o posterior y seleccione **Aceptar**.
+1. Seleccione **Aceptar**. En el cuadro de diálogo **nuevo proyecto de la plataforma universal de Windows** , asegúrese de que la **versión mínima** esté establecida en `Windows 10, Version 1809 (10.0; Build 17763)` o posterior y seleccione **Aceptar**.
 
 ## <a name="install-nuget-packages"></a>Instalar paquetes NuGet
 
 Antes de continuar, instale algunos paquetes NuGet adicionales que usará más adelante.
 
-- [Microsoft. Toolkit. UWP. UI. Controls](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Ui.Controls/) para agregar controles de interfaz de usuario para notificaciones en la aplicación y indicadores de carga.
 - [Microsoft. Toolkit. UWP. UI. Controls. DataGrid](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Ui.Controls.DataGrid/) para mostrar la información devuelta por Microsoft Graph.
 - [Microsoft. Toolkit. Graph. Controls](https://www.nuget.org/packages/Microsoft.Toolkit.Graph.Controls) para controlar el inicio de sesión y la recuperación de tokens de acceso.
 
 1. Seleccione **herramientas > el administrador de paquetes de NuGet > consola del administrador de paquetes**. En la consola del administrador de paquetes, escriba los siguientes comandos.
 
     ```powershell
-    Install-Package Microsoft.Toolkit.Uwp.Ui.Controls -Version 6.0.0
-    Install-Package Microsoft.Toolkit.Uwp.Ui.Controls.DataGrid -Version 6.0.0
+    Install-Package Microsoft.Toolkit.Uwp.Ui.Controls.DataGrid -IncludePrerelease
     Install-Package Microsoft.Toolkit.Graph.Controls -IncludePrerelease
     ```
 
@@ -45,13 +43,13 @@ En esta sección, creará la interfaz de usuario de la aplicación.
 
     :::code language="xaml" source="../demo/GraphTutorial/MainPage.xaml" id="MainPageXamlSnippet":::
 
-    Define un [NavigationView](/uwp/api/windows.ui.xaml.controls.navigationview) básico con vínculos de navegación de **calendario** y **hogares** para actuar como la vista principal de la aplicación. También agrega un control [LoginButton](https://github.com/windows-toolkit/Graph-Controls) en el encabezado de la vista. Ese control permitirá al usuario iniciar y cerrar sesión. El control no está totalmente habilitado todavía, se configurará en un ejercicio posterior.
+    Define un [NavigationView](/uwp/api/windows.ui.xaml.controls.navigationview) básico con los vínculos de navegación de eventos de **Inicio**, **calendario** y **nuevo** para actuar como la vista principal de la aplicación. También agrega un control [LoginButton](https://github.com/windows-toolkit/Graph-Controls) en el encabezado de la vista. Ese control permitirá al usuario iniciar y cerrar sesión. El control no está totalmente habilitado todavía, se configurará en un ejercicio posterior.
 
-1. Haga clic con el botón secundario en el proyecto de **tutorial gráfico** en el explorador de soluciones y seleccione **Agregar > nuevo elemento..**.. Elija **página en blanco**, `HomePage.xaml` escriba en el campo **nombre** y seleccione **Agregar**. Reemplace el elemento `<Grid>` existente del archivo por lo siguiente.
+1. Haga clic con el botón secundario en el proyecto de **tutorial gráfico** en el explorador de soluciones y seleccione **Agregar > nuevo elemento..**.. Elija **página en blanco**, escriba `HomePage.xaml` en el campo **nombre** y seleccione **Agregar**. Reemplace el elemento existente del `<Grid>` archivo por lo siguiente.
 
     :::code language="xaml" source="../demo/GraphTutorial/HomePage.xaml" id="HomePageGridSnippet" highlight="2-5":::
 
-1. Expanda **mainpage. Xaml** en el explorador de `MainPage.xaml.cs`soluciones y abra. Agregue la siguiente función a la `MainPage` clase para administrar el estado de autenticación.
+1. Expanda **mainpage. Xaml** en el explorador de soluciones y Abra `MainPage.xaml.cs` . Agregue la siguiente función a la `MainPage` clase para administrar el estado de autenticación.
 
     :::code language="csharp" source="../demo/GraphTutorial/MainPage.xaml.cs" id="SetAuthStateSnippet":::
 
@@ -69,7 +67,7 @@ En esta sección, creará la interfaz de usuario de la aplicación.
     RootFrame.Navigate(typeof(HomePage));
     ```
 
-    Cuando la aplicación se inicie por primera vez, inicializará el estado `false` de autenticación en y navegará a la Página principal.
+    Cuando la aplicación se inicie por primera vez, inicializará el estado de autenticación en `false` y navegará a la Página principal.
 
 1. Agregue el siguiente controlador de eventos para cargar la página solicitada cuando el usuario selecciona un elemento de la vista de navegación.
 
@@ -80,6 +78,9 @@ En esta sección, creará la interfaz de usuario de la aplicación.
 
         switch (invokedItem.ToLower())
         {
+            case "new event":
+                throw new NotImplementedException();
+                break;
             case "calendar":
                 throw new NotImplementedException();
                 break;
